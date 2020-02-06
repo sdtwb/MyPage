@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+}
+  
+body {
+    /* background-color: rgb(33, 35, 46); */
+    display: grid;
+    font-family: Avenir, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    /* font-smoothing: antialiased; */
+    /* 隐藏滚动栏 */
+    overflow-x: hidden;
+
+    /* background-image: url("https://api.xygeng.cn/bing/1920.php"); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+#time_now{
+    position: absolute;
+    left:40%;
+    top:10%;
+    font-size: 30px;
+}
+
+#weather{
+    color: blue;
+    display: none;
+    position: absolute;
+    top:0%;
+    left:5%;
+}

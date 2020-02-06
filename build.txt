@@ -1,0 +1,2 @@
+python -m eel index.py web --exclude json --exclude requests --exclude bs4
+python -m eel index.py web --onefile

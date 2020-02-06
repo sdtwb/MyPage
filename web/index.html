@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MyPage</title>
+
+	<style type="text/css">
+		@import url(css/index.css);
+		/* @import url(css/star.css); */
+		@import url(css/tariffCards.css);
+		@import url(css/weibo_hot.css);
+	</style>
+
+	<script type="text/javaScript" src="/eel.js"></script>	
+	<script type="text/javaScript" src="js/index.js"></script>
+
+</head>
+<body id="body">
+	<div id = "time_now"></div>
+	<div id="weibo_hot"></div>	
+
+	<div class="tariffCards" >
+		<div class="weather" onmouseover="checkMouse(this)" onmouseout="checkMouse(this)">
+			<img src="img/tarcs.png" alt="Weather" height="74">
+			<div id= "weather"></div>
+			<div id= "weather_desc">
+				<h3>Weather</h3>
+				<span>Full Insurance</span>
+			</div>
+		</div>
+		<div class="weibo_hot" onclick="checkMouse(this)">						
+			<img src="img/tarcs.png" alt="Weibo_hot" height="74">
+			<h3>微博热搜</h3>
+			<span id= "weibo_hot_scroll">Full Insurance</span>
+		</div>
+		<div class="business">
+			<img src="img/tarcs.png" alt="Business" height="74">
+			<h3>Business Class</h3>
+			<span>Full Insurance</span>
+		</div>
+		<div class="first">
+			<img src="img/tarcs.png" alt="First" height="74">
+			<h3>First Class</h3>
+			<span>Full Insurance</span>
+		</div>
+	</div>
+		
+</body>
+</html>
