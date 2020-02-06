@@ -81,10 +81,10 @@ def weather():
 	# # print(json_str.text)
 	# return json_str.text
 
-# eel.start("index.html", mode= 'edge', port= 8087)
+eel.start("index.html", mode= 'edge', port= 8087)
 
 # python调试
 if __name__== '__main__':
-	# weibo_hot_search()
+	weibo_hot_search()
 	weather()
-	# background_img()
+	background_img()

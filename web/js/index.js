@@ -33,22 +33,27 @@ function checkMouse(ele){
 	}
 }
 async function weather(){
-	// 利用openWeatherMap的weather api获取地址天气情况
+	alert("has in ")
 	var weather_res_str= await eel.weather()()
-	weather_res= JSON.parse(weather_res_str)
+	var weather_res= JSON.parse(weather_res_str)
+	alert("res")
 
-	var name= weather_res["name"]
-	var temp_now= weather_res["main"]["temp"]+ "℃"
-	var feels_like= weather_res["main"]["feels_like"]+ "℃"
-	var temp_min= weather_res["main"]["temp_min"]+ "℃"
-	var temp_max= weather_res["main"]["temp_max"]+ "℃"
-	var humidity= weather_res["main"]["humidity"]+ "%"
-	var clouds= weather_res["clouds"]["all"]+ "%"
+	// 利用openWeatherMap的weather api获取地址天气情况
+	// var weather_res_str= await eel.weather()()
+	// weather_res= JSON.parse(weather_res_str)
 
-	var weather_id= document.getElementById("weather");
-	weather_id.innerHTML= "<div><h4>"+ name+ "</h4>"
-		+"<h5>temp:"+ temp_now+ " feels_like:"+ feels_like+  " humidity:"+ humidity
-		+" temp_min/max"+ temp_min+ "/"+ temp_max+" clouds:"+ clouds+ "</h5></div>"
+	// var name= weather_res["name"]
+	// var temp_now= weather_res["main"]["temp"]+ "℃"
+	// var feels_like= weather_res["main"]["feels_like"]+ "℃"
+	// var temp_min= weather_res["main"]["temp_min"]+ "℃"
+	// var temp_max= weather_res["main"]["temp_max"]+ "℃"
+	// var humidity= weather_res["main"]["humidity"]+ "%"
+	// var clouds= weather_res["clouds"]["all"]+ "%"
+
+	// var weather_id= document.getElementById("weather");
+	// weather_id.innerHTML= "<div><h4>"+ name+ "</h4>"
+	// 	+"<h5>temp:"+ temp_now+ " feels_like:"+ feels_like+  " humidity:"+ humidity
+	// 	+" temp_min/max"+ temp_min+ "/"+ temp_max+" clouds:"+ clouds+ "</h5></div>"
 
 	setTimeout(weather, 5*60*1000);
 }
