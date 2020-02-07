@@ -33,7 +33,16 @@ a{
 
     text-shadow: 5px 5px 5px black, 0px 0px 2px red, 2px 2px 3px green;
 }
+#words_everyday{
+    position: relative;
+    width: 550px;
+    left:30%;
+    margin-top:7%;
+    font-size: 15px;
+    color: rgb(170, 160, 160);
 
+    text-shadow: 5px 5px 5px black, 0px 0px 2px red, 2px 2px 3px green;
+}
 #weather{
     color: blue;
     display: none;

@@ -33,7 +33,6 @@ function checkMouse(ele){
 	}
 }
 async function weather(){
-
 	// 利用openWeatherMap的weather api获取地址天气情况
 	var weather_res_str= await eel.weather()()
 	weather_res= JSON.parse(weather_res_str)
@@ -49,7 +48,7 @@ async function weather(){
 	var weather_id= document.getElementById("weather");
 	weather_id.innerHTML= "<div><h4>"+ name+ "</h4>"
 		+"<h5>temp:"+ temp_now+ " feels_like:"+ feels_like+  " humidity:"+ humidity
-		+" temp_min/max"+ temp_min+ "/"+ temp_max+" clouds:"+ clouds+ "</h5></div>"
+		+" temp_min/max:"+ temp_min+ "/"+ temp_max+" clouds:"+ clouds+ "</h5></div>"
 
 	setTimeout(weather, 5*60*1000);
 }
@@ -82,9 +81,20 @@ async function change_background_img(){
 
 	body.style.backgroundImage= "url('"+ background_img+ "')"
 }
+async function words_everyday(){
+	var words_everyday= document.getElementById("words_everyday")
+	var words_everyday_str= await eel.words_everyday()()
+
+	var words= JSON.parse(words_everyday_str)
+	hitokoto= words["hitokoto"]
+	from_where= words["from"]
+	words_everyday.innerHTML= hitokoto+ "--"+ from_where
+	setTimeout(words_everyday, 1000*60*60)
+}
 window.onload = function(){
 	this.change_background_img();
 	this.getTime();
+	this.words_everyday();
 	this.weibo_hot_search();
 	this.weather();
 }

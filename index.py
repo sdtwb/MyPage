@@ -67,6 +67,12 @@ def weather():
 	# print(json_str.text)
 	return json_str.text
 
+@eel.expose
+def words_everyday():
+	url_api= "https://v1.hitokoto.cn/"
+	res= requests.get(url_api)
+	return res.text
+	
 eel.start("index.html", mode= 'edge', port= 8087)
 
 # python调试
