@@ -26,17 +26,12 @@ a{
 
 #time_now{
     position: absolute;
-    left:40%;
-    top:10%;
-    font-size: 40px;
+    left:30%;
+    top:5%;
+    font-size: 50px;
     color: darkgrey;
 
-    text-shadow: 0 0 20px #fdec84,
-    10px -10px 30px #ffae35,
-    20px -20px 40px #ec760c,
-    -20px -60px 50px #cd4607,
-    0px -80px 60px #973717,
-    10px -40px 70px #451b0e;
+    text-shadow: 5px 5px 5px black, 0px 0px 2px red, 2px 2px 3px green;
 }
 
 #weather{
