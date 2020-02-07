@@ -80,6 +80,8 @@ async function change_background_img(){
 	var background_img= await eel.background_img()()
 
 	body.style.backgroundImage= "url('"+ background_img+ "')"
+	// 两个小时更新一次
+	setTimeout(change_background_img, 1000*60*60* 2)
 }
 async function words_everyday(){
 	var words_everyday= document.getElementById("words_everyday")

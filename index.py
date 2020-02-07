@@ -69,10 +69,11 @@ def weather():
 
 @eel.expose
 def words_everyday():
+	# api首页https://hitokoto.cn/api
 	url_api= "https://v1.hitokoto.cn/"
 	res= requests.get(url_api)
 	return res.text
-	
+
 eel.start("index.html", mode= 'edge', port= 8087)
 
 # python调试
