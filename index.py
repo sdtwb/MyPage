@@ -37,12 +37,15 @@ def background_img():
 
 def get_location():
 	#还可使用 http://ip.42.pl/raw、https://jsonip.com/、https://api.ipify.org/?format=json、http://httpbin.org/ip
-	# https://ipv4.jsonip.com
-	url_api_getip= "https://jsonip.com/"
-	ip= json.loads(requests.get(url_api_getip).text)
+	# https://ipv4.jsonip.com、http://ipv4.icanhazip.com/、https://api.myip.com
+	url_api_getip= "https://api.myip.com"
+	res= requests.get(url_api_getip)
+	ip= res.text
+	ip= json.loads(ip)
+	ip= ip["ip"]
 
 	# print(ip)
-	url_ip_api= "http://freeapi.ipip.net/"+ ip["ip"]
+	url_ip_api= "http://freeapi.ipip.net/"+ ip
 	res= requests.get(url_ip_api)
 	res= json.loads(res.text)
 	# print(res[2])
@@ -52,6 +55,7 @@ def get_location():
 def weather():
 	translator= Translator(from_lang="chinese", to_lang="english")
 	translation= translator.translate(get_location())
+	# print(translation)
 
 	# 天气查询--openWeatherMap
 	url_api= "http://api.openweathermap.org/data/2.5/weather?lang=zh_cn&units=metric"
@@ -67,6 +71,7 @@ eel.start("index.html", mode= 'edge', port= 8087)
 
 # python调试
 if __name__== '__main__':
-	weibo_hot_search()
-	background_img()
+	# weibo_hot_search()
+	# background_img()
 	weather()
+	# get_location()
