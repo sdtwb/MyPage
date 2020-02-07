@@ -38,14 +38,13 @@ def background_img():
 def get_location():
 	#还可使用 http://ip.42.pl/raw、https://jsonip.com/、https://api.ipify.org/?format=json、http://httpbin.org/ip
 	# https://ipv4.jsonip.com、http://ipv4.icanhazip.com/、https://api.myip.com、http://tool.nanguoyu.us/ip.php
-	# http://ipv4.icanhazip.com/
 	url_api_getip= "http://tool.nanguoyu.us/ip.php"
 	res= requests.get(url_api_getip)
-	ip= res.text+ ""
+	ip= res.text
 	# ip= json.loads(ip)
 	# ip= ip["ip"]
 
-	# print(res.encoding)
+	# print(ip)
 	url_ip_api= "http://freeapi.ipip.net/"+ ip
 	res= requests.get(url_ip_api)
 	res= json.loads(res.text)
