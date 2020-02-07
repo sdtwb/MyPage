@@ -92,7 +92,7 @@ async function words_everyday(){
 	hitokoto= words["hitokoto"]
 	from_where= words["from"]
 	words_everyday.innerHTML= hitokoto+ "--"+ from_where
-	setTimeout(words_everyday, 1000*60*60)
+	setTimeout(words_everyday, 1000*60*30)
 }
 window.onload = function(){
 	this.change_background_img();
