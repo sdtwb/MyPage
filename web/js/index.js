@@ -38,6 +38,7 @@ async function weather(){
 	weather_res= JSON.parse(weather_res_str)
 
 	var name= weather_res["name"]
+	var description= weather_res["weather"][0]["description"]
 	var temp_now= weather_res["main"]["temp"]+ "℃"
 	var feels_like= weather_res["main"]["feels_like"]+ "℃"
 	var temp_min= weather_res["main"]["temp_min"]+ "℃"
@@ -46,7 +47,7 @@ async function weather(){
 	var clouds= weather_res["clouds"]["all"]+ "%"
 
 	var weather_id= document.getElementById("weather");
-	weather_id.innerHTML= "<div><h4>"+ name+ "</h4>"
+	weather_id.innerHTML= "<div><h4>"+ name+"     "+description+ "</h4>"
 		+"<h5>temp:"+ temp_now+ " feels_like:"+ feels_like+  " humidity:"+ humidity
 		+" temp_min/max:"+ temp_min+ "/"+ temp_max+" clouds:"+ clouds+ "</h5></div>"
 
